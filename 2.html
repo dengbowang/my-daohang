@@ -4,113 +4,6 @@
 <head>
 
 
-
-
-
-
-	<style>
-		/*渐变背景CSS */
-		#canvas-basic {
-			position: fixed;
-			display: block;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			z-index: -999;
-		}
-		</style>
-		
-		
-		<!--放在自定义body-->
-		
-		<!-- 渐变背景初始化 -->
-		<canvas id="canvas-basic"></canvas> 
-		<script src="https://npm.elemecdn.com/granim@2.0.0/dist/granim.min.js"></script>
-		<script>
-		var granimInstance = new Granim({
-			element: '#canvas-basic',
-			direction: 'left-right',
-			isPausedWhenNotInView: true,
-			states : {
-				"default-state": {
-					gradients: [
-						['#a18cd1', '#fbc2eb'],
-						 ['#fff1eb', '#ace0f9'],
-						 ['#d4fc79', '#96e6a1'],
-						 ['#a1c4fd', '#c2e9fb'],
-						 ['#a8edea', '#fed6e3'],
-						 ['#9890e3', '#b1f4cf'],
-						 ['#a1c4fd', '#c2e9fb'],
-						 ['#fff1eb', '#ace0f9']
-				   
-					]
-				}
-			}
-		});
-		</script>
-		
-		
-		 
-		<body>
-			<!-- 网页鼠标点击特效（爱心） -->
-			<script type="text/javascript">
-				 ! function (e, t, a) {
-					function r() {
-						for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[
-								e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x +
-							"px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e]
-							.scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
-						requestAnimationFrame(r)
-					}
-					function n() {
-						var t = "function" == typeof e.onclick && e.onclick;
-						e.onclick = function (e) {
-							t && t(), o(e)
-						}
-					}
-		 
-					function o(e) {
-						var a = t.createElement("div");
-						a.className = "heart", s.push({
-							el: a,
-							x: e.clientX - 5,
-							y: e.clientY - 5,
-							scale: 1,
-							alpha: 1,
-							color: c()
-						}), t.body.appendChild(a)
-					}
-		 
-					function i(e) {
-						var a = t.createElement("style");
-						a.type = "text/css";
-						try {
-							a.appendChild(t.createTextNode(e))
-						} catch (t) {
-							a.styleSheet.cssText = e
-						}
-						t.getElementsByTagName("head")[0].appendChild(a)
-					}
-		 
-					function c() {
-						return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math
-							.random()) + ")"
-					}
-					var s = [];
-					e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e
-						.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
-							setTimeout(e, 1e3 / 60)
-						}, i(
-							".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"
-						), n(), r()
-				}(window, document);
-			</script>
-
-
-
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta charset="utf-8">
 	<title>立方体Cube</title>
@@ -127,12 +20,12 @@
 
 
 
-		/* body {
+		body {
 			background: url("https://pica.zhimg.com/v2-a3f24e015e969dbbf8eb83dcbfb28264_1440w.jpg?source=172ae18b");
 			-webkit-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
-		} */
+		}
 
 
 
@@ -188,7 +81,7 @@
 
 		/* Style the header */
 		header {
-			background-color: rgba(0, 0, 0, 0);
+			background-color: rgba(0, 0, 0, 0.352);
 			padding: 10px;
 			text-align: center;
 			font-size: 19px;
@@ -202,7 +95,7 @@
 			width: 132.9799px;
 			height: 500px;
 			/* only for demonstration, should be removed */
-			background: rgba(255, 255, 255, 0.5);
+			background: rgba(255, 255, 255, 0.508);
 			text-align: center;
 			font-size: 19px;
 			padding: 0px;
@@ -214,7 +107,7 @@
 			width: 132.9799px;
 			height: 500px;
 			/* only for demonstration, should be removed */
-			background: rgba(255, 193, 193, 0.5);
+			background: rgba(255, 193, 193, 0.674);
 			text-align: center;
 			font-size: 19px;
 			padding: 0px;
@@ -226,7 +119,7 @@
 			width: 132.9799px;
 			height: 500px;
 			/* only for demonstration, should be removed */
-			background: rgba(86, 157, 238, 0.5);
+			background: rgba(86, 157, 238, 0.645);
 			text-align: center;
 			font-size: 19px;
 			padding: 0px;
@@ -238,7 +131,7 @@
 			width: 132.9799px;
 			height: 500px;
 			/* only for demonstration, should be removed */
-			background: rgba(255, 243, 79, 0.5);
+			background: rgba(255, 243, 79, 0.638);
 			text-align: center;
 			font-size: 19px;
 			padding: 0px;
@@ -250,7 +143,7 @@
 			width: 132.9799px;
 			height: 500px;
 			/* only for demonstration, should be removed */
-			background: rgba(73, 182, 255, 0.5);
+			background: rgba(73, 182, 255, 0.589);
 			text-align: center;
 			font-size: 19px;
 			padding: 0px;
@@ -262,7 +155,7 @@
 			width: 132.9799px;
 			height: 500px;
 			/* only for demonstration, should be removed */
-			background: rgba(255, 94, 242, 0.5);
+			background: rgba(255, 94, 242, 0.67);
 			text-align: center;
 			font-size: 19px;
 			padding: 0px;
@@ -274,7 +167,7 @@
 			width: 132.9799px;
 			height: 500px;
 			/* only for demonstration, should be removed */
-			background: rgba(255, 255, 255, 0.5);
+			background: rgba(255, 255, 255, 0.607);
 			text-align: center;
 			font-size: 19px;
 			padding: 0px;
@@ -288,7 +181,7 @@
 			width: 132.9799px;
 			height: 500px;
 			/* only for demonstration, should be removed */
-			background: rgba(96, 191, 255, 0.5);
+			background: rgba(96, 191, 255, 0.617);
 			text-align: center;
 			font-size: 19px;
 			padding: 0px;
@@ -300,7 +193,7 @@
 			width: 132.9799px;
 			height: 500px;
 			/* only for demonstration, should be removed */
-			background: rgba(238, 200, 200, 0.5);
+			background: rgba(238, 200, 200, 0.628);
 			text-align: center;
 			font-size: 19px;
 			padding: 0px;
