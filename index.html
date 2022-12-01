@@ -430,8 +430,35 @@
 			}
 		}
 	</style>
+
 	</head>
 
+	<style type="text/css">
+		form .text {
+			display: inline-block;
+			border: 0;
+			width: 251px;
+			height: 30px;
+			font-size: 14px;
+			outline: none;
+
+			border: 2px solid #fffffff7;
+		}
+
+		form .search {
+
+			width: 50px;
+			height: 30px;
+			border: 0;
+			outline: none;
+			cursor: pointer;
+			/*   cursor: pointer;   鼠标悬停或点击时button时鼠标变成其他图标  */
+			text-align: center;
+			line-height: 10px;
+			background-color: #ae8c8c00;
+			color: #000000;
+		}
+	</style>
 
 
 
@@ -445,11 +472,36 @@
 			<!-- 			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52
 				src="https://music.163.com/outchain/player?type=2&id=817880&auto=1&height=32"></iframe> -->
 
-			<h2><a href="https://bing.com/" target="_blank">立方体Cube&#12288;导航页</a></h2>
+			<!-- <h2><a href="https://bing.com/" target="_blank">立方体Cube&#12288;导航页</a></h2> -->
+			<h2>立方体Cube&#12288;导航页</a></h2>
 			<!-- <h2><a  href="https://bing.com/"><h2 align="center">立方体Cube&#12288;导航页</h2><div align="center"></h2> -->
+
+			<body>
+
+				<!-- <form target="_blank" method="get" action="https://www.baidu.com/s">
+				<input type="text" placeholder="请输入关键词" name="word" class="text" />
+				<input type="submit" value="百度" class="search">
+			</form> -->
+
+
+
+				<form action="#" method="get" target="_blank">
+					<div> <label></label> <input name="q" value="">
+						<!--怎样可以让button的属性覆盖input的name="wd"  在此谢谢指教的前辈、师傅、爱好者。-->
+						<!-- <button type="submit"formaction="https://www.baidu.com/s?wd=">百度</button> -->
+						<button type="submit" formaction="https://cn.bing.com/search?q=">必应</button>
+						<button type="submit" formaction="https://fsoufsou.com/search?q=">F搜</button>
+					</div>
+				</form>
+
+
+
+
+			</body>
 
 
 		</header>
+
 
 		<section>
 
@@ -458,6 +510,7 @@
 
 
 					<li><a href=""><b>学习</b></a></li>
+					<li><a href="https://www.fanyedu.com/" target="_blank">亿凡教育</a></li>
 					<li><a href="https://www.bookstack.cn/" target="_blank">书栈</a></li>
 					<li><a href="https://site.sciping.com/" target="_blank">学术</a></li>
 					<li><a href="https://github.com/dengbowang" target="_blank">Github</a></li>
